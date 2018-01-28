@@ -1,0 +1,63 @@
+@import "fonts"
+@import "libs"
+@import "base"
+@import "vars"
+
+#block-header
+    background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),  url(../img/bg/header.png)    
+    background-size: cover
+    color: white 
+    
+    .content
+        max-width: 48rem
+        line-height: 1.1
+        margin: 0 auto
+        padding-top: 15.8rem
+        padding-bottom: 12.5rem
+        font-size: 2.2rem
+        .author
+            font-size: 2rem
+            text-align: right
+            span
+                font-family: 'PNCB'
+                font-size: 2.24rem
+        .title
+            font-size: 2.8rem
+            text-transform: uppercase
+            font-family: 'PNCB'
+
+        .button
+            font-size: 1.2rem
+
+        .logo
+            position: relative
+            top: 3rem
+
+        .action
+            text-align: center
+            margin-top: 6rem
+
+.container
+    max-width: 1165px;
+    margin: 0 auto
+
+.button
+    padding: 1.5rem 1rem
+    text-transform: uppercase
+    cursor: pointer
+    transition: all .3s
+
+    &.is-white
+        border: 2px solid white
+        color: white
+        background: rgba(255,255,255,0.3)
+
+
+        &:hover,
+        &:focus
+            background: rgba(255,255,255,0.5)
+
+
+
+
+@import "media" // Всегда в конце
