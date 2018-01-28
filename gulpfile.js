@@ -25,6 +25,7 @@ gulp.task('browser-sync', function() {
 gulp.task('js', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
+        'node_modules/slick-carousel/slick/slick.min.js',
 		'app/js/common.js', // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))

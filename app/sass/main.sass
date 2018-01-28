@@ -37,8 +37,13 @@
             margin-top: 6rem
 
 .container
-    max-width: 1165px;
+    max-width: 116.5rem;
     margin: 0 auto
+
+    &.is-large
+        max-width: 160rem;
+    &.has-slider
+        padding-bottom:  1rem
 
 .button
     padding: 1.5rem 1rem
@@ -82,6 +87,8 @@
         margin-bottom: 5rem
         font-family: "PNCB"
         font-size: 2.6rem
+    .slider-title
+        margin-bottom: 0 
 
 .box
     font-size: 2.0rem
@@ -136,6 +143,45 @@
 .video-block
     flex-grow: 1;
     display: flex;
-    justify-content: center
+    justify-content: flex-end
     align-items: center
+
+#block-about
+    margin-top: 1rem
+    background: $bg_gray
+    color: $gray
+    .row
+        justify-content: flex-start
+
+.text-about
+    padding-left: 10rem
+    .about-author
+        margin-top: 5rem
+        font-size: 2.2rem
+        font-family: "PNCB"
+        span
+            text-transform: uppercase
+.image-wrap
+    height: 50rem
+    width: 72rem
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+.slider
+    padding-bottom: 2rem
+    .img
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 11rem
+
+.slick-dots li button::before
+    font-size: 40px
+.slick-dots
+    bottom: 0
+.slick-dotted.slick-slider
+    margin-bottom: 0
+
 @import "media" // Всегда в конце
