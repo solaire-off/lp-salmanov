@@ -2,6 +2,23 @@
 @import "libs"
 @import "base"
 @import "vars"
+@mixin optional-at-root($sel) 
+    @at-root #{if(not &, $sel, selector-append(&, $sel))} 
+        @content;
+
+@mixin placeholder
+    @include optional-at-root('::-webkit-input-placeholder')
+        @content;
+    @include optional-at-root(':-moz-placeholder') 
+        @content;
+    @include optional-at-root('::-moz-placeholder') 
+        @content;
+    @include optional-at-root(':-ms-input-placeholder') 
+        @content;
+
+// @include placeholder 
+//     color: black
+//     opacity: 1
 
 #block-header
     background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),  url(../img/bg/header.png)    
@@ -70,7 +87,11 @@
 
         &:hover,
         &:focus
+            border-color: darken($action, 20)
             background: darken($action, 20)
+
+    &.is-large
+        width: 100%
         
 
 .row
@@ -228,4 +249,58 @@
     .card-header
         background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),  url(../img/bg/card-3.png)
         background-size: cover;
+
+
+#block-contact
+    background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),  url(../img/bg/footer.png)    
+    padding-top: 4.5rem
+    padding-bottom: 4.5rem
+
+
+    .form
+        .input,
+        .textarea
+            @include placeholder 
+                color: $gray
+                opacity: 1
+
+                                                                            
+    
+
+
+.form-wrap
+    max-width: 58rem
+    padding: 1rem 2.5rem
+    background: rgb(255,255,255)
+    background: rgba(255,255,255, 0.4)
+    color: white
+
+    .group-input
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between
+
+        input
+            width: 49%
+
+    .form-title
+        font-size: 2.4rem
+.form
+    .input
+        margin-bottom: 2rem
+        padding: 0.5rem 0.3rem
+        font-size: 1.4rem
+    .textarea
+        font-size: 1.4rem
+        padding: 1rem
+        margin-bottom: 2rem
+        width: 100%
+    .button
+        &.is-action
+            border-color: white
+
+
+.copyright
+    color: white
+    font-size: 2.2rem
 @import "media" // Всегда в конце
