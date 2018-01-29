@@ -2,24 +2,123 @@
 
 /*==========  Desktop First  ==========*/
 
+@media only screen and (max-width : 1400px)
+    .text-about
+        padding-left: 2rem
+    .image-wrap
+        width: 60rem
+        height: 50rem
+
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-	/**/
+    html
+        font-size: 8px
+
+    #block-work
+        .col
+            max-width: 35.5rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
+
+    .slider
+        padding-bottom: 4rem
+    .row
+        flex-wrap: wrap
+    .container
+        max-width: 122rem
+    .text-about
+        padding-left: 2rem
+    .image-wrap
+        width: 58rem
+        height: 50rem
 
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-	/**/
+    .row
+        justify-content: space-around
+    .video-block
+        justify-content: center
+    #block-about
+        .row
+            flex-direction: column
+            align-items: center
+
+    #block-contact 
+        .container
+            display: flex;
+            flex-direction: column
+            align-items: center
+
+    #block-work
+        .row:last-child
+            display: block
+            max-width: 50rem
+            margin-left: auto
+            margin-right: auto
+
+        .info-block
+            margin-left: auto
+            margin-right: auto
+
+        .video-block
+            display: block
+            position: relative;
+            padding-bottom: 56.25%;
+            padding-top: 30px;
+            height: 0;
+            overflow: hidden;
 
 
-/* Small Devices, Tablets */
+        .video-block iframe,
+        .video-block object,
+        .video-block embed 
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
 @media only screen and (max-width : 768px)
-	/**/
 
+    #block-work
+        .section-title
+                text-align: center
+        .info-block
+            .section-title 
+                text-align: left
+
+    .slider-title
+        text-align: center
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	/**/
+
+    #block-header 
+        .content
+            .title
+                text-align: center
+            .author
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: flex-end
+                .logo
+                    position: static
+    .image-wrap
+        width: 100%
+        height: auto
+    .text-about
+        padding: 0 1rem
+
+    #block-header .content .title
+        font-size: 2rem
+
+
+    .form-wrap 
+        .group-input
+            flex-direction: column
+            input
+                width: 100%
 
 
 /* Custom, iPhone Retina */
@@ -29,27 +128,13 @@
 
 /*==========  Mobile First  ==========*/
 
-/* Custom, iPhone Retina */
-@media only screen and (min-width : 320px)
-	/**/
-
-
-/* Extra Small Devices, Phones */
-@media only screen and (min-width : 480px)
-	/**/
-
-
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px)
-	/**/
-
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px)
-	/**/
-
 
 /* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px)
-	/**/
+@media only screen and (min-width : 1600px)
+    html
+        font-size: 12.5px
 
+
+@media only screen and (min-width : 1980px)
+    html
+        font-size: 13.5px
