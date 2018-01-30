@@ -46,4 +46,23 @@ $(function() {
         return false;
     });
 
+    $("#contact-form").submit(function(e){
+        e.preventDefault()
+
+        $url = "/mail.php";
+        $data = $(this).serialize();
+
+        $.ajax({
+            type: "POST",
+            url: $url,
+            data: $data,
+            success: function(data)
+            {
+
+                $('#contact-form').find("input, textarea").val("");
+                $('#send-button').css('background','#34C045').html('Заявка успешно отправлена');
+
+            }
+        });
+    })
 });
